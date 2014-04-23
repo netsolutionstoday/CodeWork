@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>My Photo Page</title>
+	</head>
+	<h1>Places I've Been</h1>
+<script type="text/javascript"> 
+
+var i = 0; 
+var image = new Array();   
+// LIST OF IMAGES 
+image[0] = "http://s25.postimg.org/ffvyvp7rz/Cologne_Cathedral_And_Hohenzollern_Bridge_Colog.jpg"; 
+image[1] = "http://s25.postimg.org/7pp6qk5gf/Germany_9_Rhineland_Palatinate_Cochem_Markt.jpg"; 
+image[2] = "http://s25.postimg.org/ctl1si5y7/manarola_italy_coast_21080_990x742.jpg";
+image[3] = "http://s25.postimg.org/jzcsuyf1b/venice_gondolas_canal_night.jpg";
+image[4] = "http://s25.postimg.org/h1fu197dr/Zakinthos.jpg";
+
+var k = image.length-1;    
+var caption = new Array(); 
+// LIST OF CAPTİONS 
+caption[0] = "Cologne"; 
+caption[1] = "Rhineland"; 
+caption[2] = "Italian Coast";
+caption[3] = "Venice";
+caption[4] = "Zakinthos"; 
+
+function next(){
+var el = document.getElementById("mydiv");
+el.innerHTML=caption[i];
+var img= document.getElementById("slide");
+img.src= image[i];
+if(i < k ) { i++;}
+else { i = 0; }
+}
+
+function prev(){
+var el = document.getElementById("mydiv");
+el.innerHTML=caption[i]; 
+var img= document.getElementById("slide"); 
+img.src= image[i]; 
+if(i >0 ) { i--;} 
+else { i = k; } 
+}
+
+
+function swapImage(){ 
+var el = document.getElementById("mydiv"); 
+el.innerHTML=caption[i]; 
+var img= document.getElementById("slide"); 
+img.src= image[i]; 
+if(i < k ) { i++;}  
+else  { i = 0; } 
+setTimeout("swapImage()",5000); 
+} 
+
+function addLoadEvent(func) { 
+var oldonload = window.onload; 
+if (typeof window.onload != 'function') { 
+window.onload = func; 
+} else  { 
+window.onload = function() { 
+if (oldonload) { 
+oldonload(); 
+} 
+func(); 
+} 
+} 
+} 
+addLoadEvent(function() { 
+swapImage(); 
+});
+
+</script>
+ 
+<table align = "center" style="border:3px solid #000000;background-color:#eee8aa;"> 
+	<tr>
+		<td> 
+			<img onclick="prev()" title="Previous" alt ="Prev" height="35" width="35"src="prev.png"/>
+		</td> 
+		<td> 
+			<img name="slide" id="slide" alt ="my images" height="600" width="800" src="image_1.gif"/> 
+		</td>
+		<td> 
+			<img onclick="next()" title="Next" alt ="Next" height="35" width="35" src="next.png"/> 
+		</td>
+	</tr>
+	<tr> 
+		<td align= "center" colspan = "3" style="font:small-caps bold 20px georgia; color:blue;"
+		<div id ="mydiv"></div> 
+		</tr> 
+	</td> 
+</table>
+
