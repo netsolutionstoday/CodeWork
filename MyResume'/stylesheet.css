@@ -44,6 +44,15 @@ h4 {
 	color: #000000;
 }
 
+#table	{
+	position: absolute;
+	left: 150px;
+	top: 75px;
+	border:0px solid #000000;
+	background-color:#eee8aa;
+	z-index:1;
+}
+
 li {
 	list-style-type: square;
 }
