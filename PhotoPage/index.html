@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link type="text/css" rel="stylesheet" href="stylesheet.css"/>
+        <title>My Resume</title>
+    </head>
+    <body>
+        <div id="body">
+        <div id="header">
+            <p id="name">Robert Stephens</p>
+            <a href="mailto:robertstephens225@hotmail.com"><p id="email">robertstephens225@hotmail.com</p></a>
+        </div>
+        <div class="left">
+            <h4>Objective</h4>
+            <p>Seeking a position as a Front-End Developer.</p>
+            <h4>Experience</h4>
+            <p>I am self taught</p>
+            <ul>
+                <li>3 CodeAcademy Projects</li>
+                <li>HTML/CSS Course Completion</li>
+                <li>JavaScript Course Completion</li>
+                <li>currently studying Ruby</li>
+            </ul>
+            <h4>Skills</h4>
+            <p>Languages: HTML, CSS, JavaScript</p>
+            <h4>Education</h4>
+            <p>B.S.Education, Missouri State University</p>
+            <ul>
+                <li>Major - Physics</li>
+                <li>GPA: 3.1</li>
+            </ul>
+        </div>
+        <div id="table">
+                <table>
+                <tr>
+                    <td> 
+                        <img onclick="prev()" title="Previous" alt ="Prev" height="35" width="35" src="prev.png"/>
+                    </td> 
+                    <td> 
+                        <img name="slide" id="slide" alt ="my images" height="500" width="800" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACwAAAAAAQABAAACAkQBADs="/> 
+                        </td>
+                    <td> 
+                        <img onclick="next()" title="Next" alt ="Next" height="35" width="35" src="next.png"/> 
+                    </td>
+                </tr>
+                <tr> 
+                    <td align= "center" id="mydiv" colspan = "3" style="font:small-caps bold 20px georgia; color:blue;"/>
+                    </td> 
+                </tr>
+                </table>
+        </div>
+        <div id="footer">
+            <p>Missouri| Tel: (417) 396-0563</p>
+        </div>
+
+        <div class="right">
+<ul class="slider">
+    <li>
+        <input type="radio" id="slide1" name="slide" checked>
+        <label for="slide1"></label>
+        <img src="http://joshnh.com/2012/08/14/making-a-pure-css-featured-image-slider/"Panel 1">
+    </li>
+    <li>
+        <input type="radio" id="slide2" name="slide">
+        <label for="slide2"></label>
+        <img src="http://joshnh.com/2012/08/14/making-a-pure-css-featured-image-slider/"Panel 2">
+    </li>
+    <li>
+        <input type="radio" id="slide3" name="slide">
+        <label for="slide3"></label>
+        <img src="http://joshnh.com/2012/08/14/making-a-pure-css-featured-image-slider/"Panel 3">
+    </li>
+    <li>
+        <input type="radio" id="slide4" name="slide">
+        <label for="slide4"></label>
+        <img src="http://joshnh.com/2012/08/14/making-a-pure-css-featured-image-slider/"Panel 4">
+    </li>
+</ul>​
+</body>
+</html>
