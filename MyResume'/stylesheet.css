@@ -2,6 +2,10 @@ div {
 	border-radius: 5px;
 }
 
+#body {
+	background-color: #FFFFFF;
+}
+
 #header {
 	z-index: 1;
 	position: fixed;
@@ -30,31 +34,50 @@ div {
 	color: #ffffff;
 }
 
+#table	{
+	position: absolute;
+	left: 175px;
+	top: 75px;
+	border:1px solid #000000;
+	background-color: #E6E6E6;
+	z-index:1;
+}
+
+#slide {
+	position: relative;
+	height: 500px;
+	width: 800px;
+}
+
+#prev {
+	position: relative;
+	top: -200px;
+	height: 35px;
+	width: 35px;
+}
+
+#next {
+	position: relative;
+	top: -200px;
+	height: 35px;
+	width: 35px;
+}
+
+#mydiv {
+	text-align: center;
+	font:small-caps bold 20px georgia; 
+	color: blue;
+}
+
+
 h4 {
 	margin-left: 5px;
 	margin-bottom: 15px;
 	font-family: Verdana, sans-serif;
 }
 
-.right p {
-	margin-left: 5px;
-	margin-right: 5px;
-	margin-top: -10px;
-	font-family: Garamond, serif;
-	color: #000000;
-}
-
-#table	{
-	position: absolute;
-	left: 150px;
-	top: 75px;
-	border:0px solid #000000;
-	background-color:#eee8aa;
-	z-index:1;
-}
-
 li {
-	list-style-type: square;
+	list-style-type: circle;
 }
 
 a:hover {
@@ -69,6 +92,14 @@ a:hover {
 	height: 715px;
 	background-color: #B9D7D9;
 	margin-bottom: 10px;
+}
+
+.left p {
+	margin-left: 5px;
+	margin-right: 5px;
+	margin-top: -10px;
+	font-family: Garamond, serif;
+	color: #000000;
 }
 
 .right {
