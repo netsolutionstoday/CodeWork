@@ -49,27 +49,34 @@
 		<div id="footer">
 			<p>Missouri| Tel: (417) 396-0563</p>
 		</div>
+		
+		</div>
+	</body>
+</html>
 
-	
 <script type="text/javascript">
 
+// LIST OF IMAGES
 var i = 0; 
-var image = new Array();   
-// LIST OF IMAGES 
+var image = new Array();
+     
 image[0] = "http://s25.postimg.org/ffvyvp7rz/Cologne_Cathedral_And_Hohenzollern_Bridge_Colog.jpg"; 
 image[1] = "http://s25.postimg.org/7pp6qk5gf/Germany_9_Rhineland_Palatinate_Cochem_Markt.jpg"; 
 image[2] = "http://s25.postimg.org/ctl1si5y7/manarola_italy_coast_21080_990x742.jpg";
 image[3] = "http://s25.postimg.org/jzcsuyf1b/venice_gondolas_canal_night.jpg";
 image[4] = "http://s25.postimg.org/h1fu197dr/Zakinthos.jpg";
 
+
+// LIST OF CAPTİONS
 var k = image.length-1;    
 var caption = new Array(); 
-// LIST OF CAPTİONS 
+ 
 caption[0] = "Cologne"; 
 caption[1] = "Rhineland"; 
 caption[2] = "Italian Coast";
 caption[3] = "Venice";
 caption[4] = "Zakinthos"; 
+
 
 
 //FUNCTION TO ADVANCE TO NEXT IMAGE UPON CLICK
@@ -109,7 +116,6 @@ function swapImage() {
 	var img= document.getElementById("slide"); 
 	img.src= image[i];
 
-
 	if(i < k ) {
 		i++;
 	}  
@@ -118,32 +124,6 @@ function swapImage() {
 	} 
 	setTimeout("swapImage()",5000); 
 } 
-
-function addLoadEvent(func) { 
-	var oldonload = window.onload; 
-
-	if (typeof window.onload != 'function') { 
-		window.onload = func; 
-	} 
-	else  { 
-		window.onload = function() {
-
-		if (oldonload) { 
-
-oldonload(); 
-} 
-func(); 
-} 
-} 
-} 
-addLoadEvent(function() { 
-swapImage(); 
-});
+swapImage();
 
 </script>
-		
-
-
-		</div>
-	</body>
-</html>
