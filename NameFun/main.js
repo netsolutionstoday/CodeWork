@@ -15,6 +15,5 @@ else {
     
 }
 
-
 drawName(myName, letterColors);
 bounceBubbles(myName, letterColors);
