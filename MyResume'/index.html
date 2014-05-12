@@ -80,12 +80,20 @@ var caption = [
 ]
 
 
+function setCaption()  {
+	var el = document.getElementById("mydiv");
+	el.innerHTML = caption[i];
+}
+
+function setImage()	{
+	var img = document.getElementById("slide");
+	img.src = image[i];
+}
+
 //FUNCTION TO ADVANCE TO NEXT IMAGE UPON CLICK
 function next()	{
-	var el = document.getElementById("mydiv");
-	el.innerHTML=caption[i];
-	var img= document.getElementById("slide");
-	img.src= image[i];
+	setCaption();
+	setImage();
 
 	if(i < k ) { 
 		i++;
@@ -97,11 +105,9 @@ function next()	{
 
 //FUNCTION TO ADVANCE TO PREVIOUS IMAGE UPON CLICK
 function prev()	{
-	var el = document.getElementById("mydiv");
-	el.innerHTML=caption[i]; 
-	var img= document.getElementById("slide"); 
-	img.src= image[i];
-
+	setCaption();
+	setImage();
+	
 	if(i >0 )	{
 	 	i--;
 	} 
@@ -111,11 +117,9 @@ function prev()	{
 }
 
 //FUNCTION TO ADVANCE TO NEXT IMAGE AFTER SET TIMEOUT
-function swapImage() { 
-	var el = document.getElementById("mydiv");
-	el.innerHTML=caption[i]; 
-	var img= document.getElementById("slide"); 
-	img.src= image[i];
+function swapImage() {
+	 setCaption();
+	 setImage();
 
 	if(i < k ) {
 		i++;
